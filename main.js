@@ -12,7 +12,7 @@ for (let o of derp){
 
         y = y.replace(reg2, function (nb) {
             nb = nb * 0.45;
-            return Math.floor(nb);
+            return Math.round(nb);
         });
         y = y.replace(/(lbs|lb)/g,'kg');
         return '<span title="'+oldY+'" style="text-decoration: underline">'+y+'</span>';
@@ -26,7 +26,7 @@ for (let o of derp){
         c = eval(b);
         c *= 2.54;
 
-        return '<span title="'+ft+'" style="text-decoration: underline">'+Math.floor(c)+'cm'+'</span>';
+        return '<span title="'+ft+'" style="text-decoration: underline">'+Math.round(c)+'cm'+'</span>';
     });
 
     o.innerHTML = text;
