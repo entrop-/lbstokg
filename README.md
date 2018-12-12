@@ -1,5 +1,5 @@
 # lbstokg
-## this find accurences of imperial weight and height and converts to metric ##
+## this finds accurences of imperial weight and height and converts to metric ##
 
 I was tired of browsing 4chans /fit/ and not understanding those silly units
 
