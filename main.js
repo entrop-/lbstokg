@@ -4,7 +4,7 @@ for (let o of derp){
 
     let text = o.innerHTML;
     const regex = new RegExp("[+-]?\\d+(?:\\.\\d+)?\\s*(lbs|lb)",'g');
-    const feet = new RegExp("\\d+\\'(\\s?(\\d+\x22?))?");
+    const feet = new RegExp("\\d+(\\'|\\’)(\\s?(\\d+\x22?))?");
 
     text = text.replace(regex, function(y){
         const oldY = y;
@@ -22,7 +22,7 @@ for (let o of derp){
 
         let
         a = ft.replace( /(\x22)/g, ''),
-        b = a.replace( /'/g, '* 12 +'),
+        b = a.replace( /('|’)/g, '* 12 +'),
         c = eval(b);
         c *= 2.54;
 
